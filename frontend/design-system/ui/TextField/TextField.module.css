@@ -1,0 +1,108 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: var(--field-height);
+  padding-inline: 18px;
+  background: var(--color-bg);
+  border: 1.5px solid var(--color-bg);
+  border-radius: var(--radius-control);
+  transition:
+    background-color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-fast) var(--ease-standard);
+}
+
+.input {
+  width: 100%;
+  /* Место сверху под уехавшую метку. */
+  padding: 17px 0 3px;
+  font: var(--text-body-strong);
+  color: var(--color-text);
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--color-text-placeholder);
+}
+
+.numeric {
+  font-feature-settings: var(--font-feature-numeric);
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+/*
+  Метка — она же плейсхолдер. Пока поле пустое и не в фокусе, она стоит по
+  центру крупным кеглем; с появлением значения уезжает наверх. Состояние
+  берётся из :placeholder-shown, поэтому поле остаётся неконтролируемым —
+  на мобильной воронке это заметно меньше перерисовок.
+*/
+.label {
+  position: absolute;
+  top: 10px;
+  left: 18px;
+  font: 400 var(--size-micro) / 1 var(--font-ui);
+  color: var(--color-text-tertiary);
+  pointer-events: none;
+  transition:
+    top var(--duration-fast) var(--ease-standard),
+    font-size var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard);
+}
+
+.field:not(.withPlaceholder) .input:placeholder-shown:not(:focus) ~ .label {
+  top: 50%;
+  font-size: var(--size-body);
+  color: var(--color-text-placeholder);
+  transform: translateY(-50%);
+}
+
+.field:focus-within {
+  background: var(--color-surface);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-focus);
+}
+
+.field:focus-within .label {
+  color: var(--color-accent);
+}
+
+.invalid,
+.invalid:focus-within {
+  background: var(--color-surface);
+  border-color: var(--color-danger);
+}
+
+.invalid:focus-within {
+  box-shadow: var(--shadow-focus-danger);
+}
+
+.invalid .label,
+.invalid:focus-within .label {
+  color: var(--color-danger);
+}
+
+.disabled {
+  background: var(--color-bg);
+  border-color: var(--color-bg);
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.hint {
+  font: var(--text-label);
+  color: var(--color-text-muted);
+}
+
+.error {
+  font: 400 var(--size-label) / 1.4 var(--font-ui);
+  color: var(--color-danger);
+}

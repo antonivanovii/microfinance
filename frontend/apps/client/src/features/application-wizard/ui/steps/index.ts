@@ -1,0 +1,7 @@
+export { LoanParamsStep } from './LoanParamsStep'
+export { PersonalStep } from './PersonalStep'
+export { PassportStep } from './PassportStep'
+export { AddressStep } from './AddressStep'
+export { EmploymentStep } from './EmploymentStep'
+export { PayoutStep } from './PayoutStep'
+export { ConsentsStep } from './ConsentsStep'

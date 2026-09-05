@@ -1,0 +1,144 @@
+.grid {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.card {
+  padding: 22px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+
+/* Первый займ — фиолетовый: это и есть оффер, ради которого блок существует. */
+.featured {
+  color: var(--color-text-inverse);
+  background: linear-gradient(150deg, var(--brand-500), var(--brand-700));
+  border-color: transparent;
+  box-shadow: 0 12px 28px rgb(91 47 224 / 0.26);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  margin-bottom: 14px;
+  padding-inline: var(--space-3);
+  font: 600 13px / 1 var(--font-ui);
+  border-radius: var(--radius-pill);
+}
+
+.chipNeutral {
+  color: var(--neutral-700);
+  background: var(--color-bg);
+}
+
+.chipSuccess {
+  color: var(--color-success);
+  background: var(--color-success-subtle);
+}
+
+.chipOnFeatured {
+  color: var(--color-text-inverse);
+  background: rgb(255 255 255 / 0.2);
+}
+
+.amount {
+  margin-bottom: 14px;
+  font: 800 34px / 1.05 var(--font-display);
+  font-feature-settings: var(--font-feature-numeric);
+  font-variant-numeric: tabular-nums lining-nums;
+  letter-spacing: var(--tracking-h1);
+}
+
+.row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+  font: 400 15px / 1.4 var(--font-ui);
+  color: var(--color-text-secondary);
+}
+
+.featured .row {
+  color: rgb(255 255 255 / 0.85);
+}
+
+.rowValue {
+  font-weight: var(--weight-medium);
+  font-feature-settings: var(--font-feature-numeric);
+  font-variant-numeric: tabular-nums lining-nums;
+  color: var(--color-text);
+}
+
+.featured .rowValue {
+  color: var(--color-text-inverse);
+}
+
+.total {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--color-divider);
+}
+
+.featured .total {
+  border-top-color: rgb(255 255 255 / 0.25);
+}
+
+.totalValue {
+  font: 700 20px / 1.2 var(--font-display);
+  font-feature-settings: var(--font-feature-numeric);
+  font-variant-numeric: tabular-nums lining-nums;
+  color: var(--color-text);
+}
+
+.featured .totalValue {
+  color: var(--color-text-inverse);
+}
+
+@media (min-width: 1120px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-5);
+  }
+
+  .card {
+    padding: var(--space-8);
+    border-radius: var(--radius-panel);
+  }
+
+  .featured {
+    box-shadow: 0 14px 32px rgb(91 47 224 / 0.28);
+  }
+
+  .chip {
+    height: 32px;
+    margin-bottom: var(--space-5);
+    padding-inline: 14px;
+    font-size: 14px;
+  }
+
+  .amount {
+    margin-bottom: var(--space-5);
+    font-size: 44px;
+    letter-spacing: var(--tracking-display);
+  }
+
+  .row {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .total {
+    padding-top: 14px;
+  }
+
+  .totalValue {
+    font-size: 22px;
+  }
+}

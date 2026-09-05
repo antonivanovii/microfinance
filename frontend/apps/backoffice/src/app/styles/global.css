@@ -1,0 +1,15 @@
+@import '@ds/styles/base.css';
+
+/*
+  Бэк-офис — desktop. Плотнее ЛК: оператор смотрит на реестр целый день,
+  и воздух здесь стоит строк на экране.
+*/
+:root {
+  color-scheme: light;
+  --backoffice-density: 1;
+}
+
+body {
+  font-size: var(--text-sm);
+  background: var(--color-bg-subtle);
+}

@@ -1,0 +1,94 @@
+.esia {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  text-align: left;
+  background: var(--color-accent-subtle);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.esia:hover {
+  background: var(--brand-300);
+}
+
+.esia:focus-visible {
+  box-shadow: var(--shadow-focus);
+}
+
+.esia:disabled {
+  cursor: progress;
+  opacity: 0.6;
+}
+
+.esiaMark {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-tile);
+  height: var(--icon-tile);
+  font: 700 15px / 1 var(--font-ui);
+  color: var(--color-text-inverse);
+  background: var(--brand-700);
+  border-radius: 14px;
+}
+
+.esiaTitle {
+  display: block;
+  font: 600 16px / 1.3 var(--font-ui);
+  color: #2b1a5c;
+}
+
+.esiaText {
+  display: block;
+  font: 400 13px / 1.35 var(--font-ui);
+  color: #5a4a8a;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: var(--space-2) 0;
+  font: 400 var(--size-label) / 1 var(--font-ui);
+  color: var(--color-disabled-text);
+}
+
+.divider::before,
+.divider::after {
+  height: 1px;
+  flex: 1;
+  background: var(--color-border);
+  content: '';
+}
+
+@media (min-width: 1120px) {
+  .esia {
+    gap: 18px;
+    padding: var(--space-6);
+    border-radius: var(--radius-card);
+  }
+
+  .esiaMark {
+    width: 56px;
+    height: 56px;
+    font-size: 17px;
+    border-radius: 18px;
+  }
+
+  .esiaTitle {
+    font-size: 18px;
+  }
+
+  .esiaText {
+    font-size: 15px;
+  }
+
+  .divider {
+    display: none;
+  }
+}

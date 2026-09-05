@@ -1,0 +1,29 @@
+.root {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: var(--space-4) var(--space-5);
+  color: var(--color-text-inverse);
+  background: var(--neutral-900);
+  border-radius: 20px;
+  box-shadow: var(--shadow-sheet);
+}
+
+.text {
+  flex: 1;
+  font: 500 15px / 1.4 var(--font-ui);
+}
+
+.action {
+  flex-shrink: 0;
+  font: var(--text-footnote-strong);
+  color: var(--brand-300);
+  white-space: nowrap;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.action:hover {
+  color: var(--color-text-inverse);
+}

@@ -1,0 +1,86 @@
+{
+  "name": "microfinance",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.33.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vite --config apps/client/vite.config.ts",
+    "dev:client": "vite --config apps/client/vite.config.ts",
+    "dev:backoffice": "vite --config apps/backoffice/vite.config.ts",
+    "build": "pnpm run build:client && pnpm run build:backoffice",
+    "build:client": "tsc -b && vite build --config apps/client/vite.config.ts",
+    "build:backoffice": "tsc -b && vite build --config apps/backoffice/vite.config.ts",
+    "preview:client": "vite preview --config apps/client/vite.config.ts",
+    "preview:backoffice": "vite preview --config apps/backoffice/vite.config.ts",
+    "typecheck": "tsc -b --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "e2e": "playwright test",
+    "e2e:ui": "playwright test --ui",
+    "msw:init": "msw init public --save",
+    "check": "pnpm run typecheck && pnpm run lint && pnpm run format:check && pnpm run test"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "5.9.1",
+    "@tanstack/react-query": "5.102.8",
+    "axios": "^1.20.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-hook-form": "7.87.0",
+    "react-router-dom": "7.18.3",
+    "zod": "4.5.4",
+    "zustand": "5.0.15"
+  },
+  "devDependencies": {
+    "@babel/core": "8.0.1",
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.62.1",
+    "@rolldown/plugin-babel": "0.2.3",
+    "@tanstack/react-query-devtools": "5.102.8",
+    "@testing-library/dom": "10.4.1",
+    "@testing-library/jest-dom": "7.0.1",
+    "@testing-library/react": "16.3.3",
+    "@testing-library/user-event": "14.6.7",
+    "@types/babel__core": "7.20.5",
+    "@types/node": "26.4.1",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.6",
+    "@vitejs/plugin-react": "6.1.1",
+    "@vitest/coverage-v8": "4.1.11",
+    "babel-plugin-react-compiler": "1.0.0",
+    "eslint": "10.9.1",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.5",
+    "eslint-plugin-boundaries": "7.2.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "eslint-plugin-react-refresh": "0.5.6",
+    "globals": "17.12.0",
+    "jsdom": "30.0.1",
+    "msw": "2.15.0",
+    "prettier": "3.9.6",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.69.0",
+    "vite": "8.2.2",
+    "vitest": "4.1.11"
+  },
+  "msw": {
+    "workerDirectory": [
+      "apps/client/public",
+      "apps/backoffice/public"
+    ]
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "msw"
+    ]
+  }
+}

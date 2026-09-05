@@ -1,0 +1,72 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.cells {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.cell {
+  width: var(--otp-cell-width);
+  height: var(--otp-cell-height);
+  padding: 0;
+  font: 600 30px / 1 var(--font-display);
+  font-feature-settings: var(--font-feature-numeric);
+  color: var(--color-text);
+  text-align: center;
+  background: var(--color-bg);
+  border: 1.5px solid var(--color-bg);
+  border-radius: var(--radius-control);
+  outline: none;
+  transition:
+    background-color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-fast) var(--ease-standard);
+}
+
+.cell:focus {
+  color: var(--color-accent);
+  background: var(--color-surface);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-focus);
+}
+
+.invalid .cell {
+  border-color: var(--color-danger);
+  background: var(--color-surface);
+}
+
+.invalid .cell:focus {
+  color: var(--color-danger);
+  box-shadow: var(--shadow-focus-danger);
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  font: var(--text-footnote);
+  color: var(--color-text-secondary);
+}
+
+.resend {
+  font: var(--text-footnote-strong);
+  color: var(--color-on-accent-subtle);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.resend:disabled {
+  font: var(--text-footnote);
+  color: var(--color-text-secondary);
+  cursor: default;
+}
+
+.error {
+  font: 400 var(--size-label) / 1.4 var(--font-ui);
+  color: var(--color-danger);
+}

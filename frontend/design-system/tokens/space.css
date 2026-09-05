@@ -1,0 +1,34 @@
+/* Раздел 03 макета. Шаг сетки — 4. */
+:root {
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px; /* внутри чипа */
+  --space-3: 12px; /* между строками */
+  --space-4: 16px; /* поля экрана */
+  --space-5: 20px; /* внутри карточки */
+  --space-6: 24px;
+  --space-7: 28px; /* панель, герой-карточка */
+  --space-8: 32px; /* между блоками */
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px; /* между разделами длинной страницы */
+
+  --control-lg: 56px; /* главная кнопка */
+  --control-md: 48px;
+  --control-sm: 40px;
+  --field-height: 60px;
+  --otp-cell-width: 64px;
+  --otp-cell-height: 76px;
+  --switch-width: 56px;
+  --switch-height: 32px;
+  --checkbox-size: 26px;
+  --icon-tile: 44px;
+
+  --hit-target: 44px;
+
+  --container-narrow: 420px; /* шаг воронки */
+  --container-content: 640px; /* ЛК */
+  --container-wide: 1440px; /* реестры бэк-офиса */
+}

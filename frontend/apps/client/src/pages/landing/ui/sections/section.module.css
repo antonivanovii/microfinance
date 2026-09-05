@@ -1,0 +1,59 @@
+/* Секции чередуются: белая, тонированная, белая. Базовый фон страницы белый. */
+.section {
+  padding: var(--space-8) var(--space-5);
+}
+
+.tinted {
+  background: var(--color-bg);
+}
+
+.head {
+  margin-bottom: var(--space-6);
+}
+
+.overline {
+  display: block;
+  margin-bottom: var(--space-3);
+  font: var(--text-overline);
+  letter-spacing: var(--tracking-overline);
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+}
+
+.title {
+  font: 700 26px / 1.15 var(--font-display);
+  letter-spacing: var(--tracking-h2);
+  text-wrap: balance;
+}
+
+.lead {
+  margin-top: var(--space-3);
+  font: var(--text-footnote);
+  color: var(--color-text-secondary);
+  text-wrap: pretty;
+}
+
+@media (min-width: 1120px) {
+  .section {
+    padding: 72px 64px;
+  }
+
+  .inner {
+    max-width: 1312px;
+    margin-inline: auto;
+  }
+
+  .head {
+    margin-bottom: var(--space-10);
+  }
+
+  .title {
+    font-size: 40px;
+    line-height: 1.1;
+  }
+
+  .lead {
+    max-width: 640px;
+    font-size: 17px;
+  }
+}

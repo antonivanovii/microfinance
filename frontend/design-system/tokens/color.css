@@ -1,0 +1,77 @@
+/* Раздел 01 макета. Фиолетовый — только под действие и бренд. */
+:root {
+  --brand-soft: #f0ebff;
+  --brand-300: #c4aeff;
+  --brand-500: #7b4dff;
+  --brand-700: #5b2fe0;
+
+  --neutral-0: #ffffff;
+  --neutral-25: #f5f3fb;
+  --neutral-50: #f2f0f7;
+  --neutral-100: #ece9f3;
+  --neutral-200: #dcd7ea;
+  --neutral-250: #edeaf4;
+  --neutral-300: #b4aec4;
+  --neutral-350: #a9a3b8;
+  --neutral-400: #8b84a0;
+  --neutral-500: #7a7488;
+  --neutral-600: #6e6980;
+  --neutral-700: #4a4458;
+  --neutral-900: #16121f;
+
+  --green-600: #12915b;
+  --green-50: #e9f7f0;
+  --amber-600: #b26a00;
+  --amber-900: #6b4300;
+  --amber-50: #fff4e2;
+  --red-600: #d93f2b;
+  --red-900: #8a2214;
+  --red-50: #ffece7;
+  --violet-900: #3d2a6b;
+
+  --color-bg: var(--neutral-25);
+  --color-bg-subtle: var(--neutral-50);
+  --color-bg-sunken: var(--neutral-100);
+  --color-surface: var(--neutral-0);
+  --color-overlay: rgb(22 18 31 / 0.44);
+
+  --color-text: var(--neutral-900);
+  --color-text-secondary: var(--neutral-600);
+  --color-text-tertiary: var(--neutral-400);
+  --color-text-muted: var(--neutral-500);
+  --color-text-placeholder: var(--neutral-350);
+  --color-text-inverse: var(--neutral-0);
+  --color-text-link: var(--brand-700);
+  --color-text-link-hover: var(--brand-500);
+
+  --color-border: var(--neutral-100);
+  --color-border-strong: var(--neutral-200);
+  --color-divider: var(--neutral-50);
+  --color-focus-ring: var(--brand-500);
+
+  --color-accent: var(--brand-500);
+  --color-accent-hover: var(--brand-700);
+  --color-accent-active: var(--brand-700);
+  --color-accent-subtle: var(--brand-soft);
+  --color-on-accent: var(--neutral-0);
+  --color-on-accent-subtle: var(--brand-700);
+
+  --color-disabled-bg: var(--neutral-250);
+  --color-disabled-text: var(--neutral-300);
+
+  --color-success: var(--green-600);
+  --color-success-subtle: var(--green-50);
+  --color-warning: var(--amber-600);
+  --color-warning-subtle: var(--amber-50);
+  --color-on-warning-subtle: var(--amber-900);
+  --color-danger: var(--red-600);
+  --color-danger-subtle: var(--red-50);
+  --color-on-danger-subtle: var(--red-900);
+  --color-info: var(--brand-500);
+  --color-info-subtle: var(--brand-soft);
+  --color-on-info-subtle: var(--violet-900);
+
+  --color-overdue: var(--color-danger);
+  --color-overdue-subtle: var(--color-danger-subtle);
+  --color-on-overdue-subtle: var(--color-on-danger-subtle);
+}

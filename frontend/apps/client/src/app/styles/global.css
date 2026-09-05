@@ -1,0 +1,22 @@
+@import '@ds/styles/base.css';
+
+/*
+  ЛК — mobile-first: базовые правила пишем для телефона, десктоп догоняем
+  медиа-запросами вверх. Мобильный трафик здесь преобладает с большим отрывом.
+*/
+:root {
+  color-scheme: light;
+}
+
+body {
+  /* Safe area на телефонах с вырезом: нижняя кнопка погашения не должна
+     уезжать под системную полосу. */
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Якоря лендинга. Пользователи с prefers-reduced-motion получают мгновенный
+   переход — это правило уважает системную настройку само. */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--space-5);
+}

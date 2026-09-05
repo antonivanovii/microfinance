@@ -1,0 +1,1 @@
+export { ObjectImage } from './ObjectImage'

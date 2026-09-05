@@ -1,0 +1,131 @@
+/*
+  Маскот стоит на нижней кромке блока: у него отрицательный нижний отступ,
+  поэтому у контейнера снизу нет паддинга, а `overflow: hidden` подрезает
+  выступающую часть по скруглению.
+*/
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  margin: 0 var(--space-5) var(--space-10);
+  padding: var(--space-8) var(--space-5) 0;
+  text-align: center;
+  background: linear-gradient(150deg, var(--brand-500), var(--brand-700));
+  border-radius: var(--radius-sheet);
+  box-shadow: 0 14px 32px rgb(91 47 224 / 0.3);
+}
+
+.title {
+  margin-bottom: var(--space-4);
+  font: 700 26px / 1.15 var(--font-display);
+  letter-spacing: var(--tracking-h2);
+  color: var(--color-text-inverse);
+  text-wrap: balance;
+}
+
+.note {
+  margin-bottom: var(--space-6);
+  font: var(--text-footnote);
+  color: rgb(255 255 255 / 0.82);
+  text-wrap: pretty;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: 100%;
+  max-width: 420px;
+}
+
+.primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--control-lg);
+  font: 600 17px / 1 var(--font-ui);
+  color: var(--brand-700);
+  background: var(--color-surface);
+  border-radius: var(--radius-control);
+}
+
+.primary:hover {
+  background: var(--color-accent-subtle);
+}
+
+.secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--control-lg);
+  font: 600 17px / 1 var(--font-ui);
+  color: var(--color-text-inverse);
+  background: rgb(255 255 255 / 0.16);
+  border-radius: var(--radius-control);
+}
+
+.secondary:hover {
+  background: rgb(255 255 255 / 0.26);
+}
+
+.mascot {
+  display: block;
+  width: 190px;
+  height: 190px;
+  margin: var(--space-2) auto -14px;
+  object-fit: contain;
+}
+
+@media (min-width: 1120px) {
+  .root {
+    max-width: 1312px;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: var(--space-10);
+    margin-inline: auto;
+    padding: 56px 56px 0;
+    text-align: left;
+    border-radius: 36px;
+  }
+
+  .body {
+    flex: 1;
+    padding-bottom: 56px;
+  }
+
+  .title {
+    max-width: 520px;
+    font-size: 44px;
+    line-height: 1.1;
+    letter-spacing: var(--tracking-display);
+  }
+
+  .note {
+    max-width: 460px;
+    margin-bottom: var(--space-8);
+    font-size: 18px;
+    line-height: 1.55;
+  }
+
+  .actions {
+    flex-direction: row;
+    gap: 14px;
+    max-width: none;
+  }
+
+  .primary,
+  .secondary {
+    height: 60px;
+    padding-inline: var(--space-8);
+    font-size: 18px;
+    border-radius: 18px;
+  }
+
+  .mascot {
+    width: 300px;
+    height: 300px;
+    flex: none;
+    margin: 0 0 -12px;
+  }
+}

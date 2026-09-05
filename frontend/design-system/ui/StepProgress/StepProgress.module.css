@@ -1,0 +1,27 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.track {
+  display: flex;
+  gap: 6px;
+}
+
+.segment {
+  flex: 1;
+  height: 6px;
+  background: var(--color-bg-sunken);
+  border-radius: var(--radius-pill);
+  transition: background-color var(--duration-normal) var(--ease-standard);
+}
+
+.done {
+  background: var(--color-accent);
+}
+
+.caption {
+  font: var(--text-label);
+  color: var(--color-text-tertiary);
+}

@@ -1,0 +1,13 @@
+/* Раздел 03 макета. */
+:root {
+  --radius-none: 0;
+  --radius-sm: 8px; /* чекбокс */
+  --radius-chip: 12px; /* чип, мелкая кнопка */
+  --radius-control: 16px; /* поле, кнопка L */
+  --radius-control-md: 14px; /* кнопка M */
+  --radius-card: 24px; /* карточка */
+  --radius-sheet: 32px; /* шторка, герой */
+  --radius-panel: 28px; /* панель дизайн-системы, крупный блок */
+  --radius-pill: 999px;
+  --radius-circle: 50%;
+}

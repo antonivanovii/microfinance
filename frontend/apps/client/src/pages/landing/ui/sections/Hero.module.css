@@ -1,0 +1,169 @@
+/*
+  Мобильный: фиолетовый блок со скруглённым низом, калькулятор карточкой под
+  ним на белой странице. Десктоп: фиолетовый заливает всю секцию, текст и
+  калькулятор становятся колонками, шапка тянется на всю ширину.
+*/
+.root {
+  display: grid;
+  grid-template-areas: 'header' 'banner' 'calculator';
+}
+
+.header,
+.banner {
+  padding-inline: var(--space-5);
+  background: linear-gradient(165deg, var(--brand-500) 0%, var(--brand-700) 100%);
+}
+
+.header {
+  grid-area: header;
+}
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  grid-area: banner;
+  padding-bottom: var(--space-6);
+  border-radius: 0 0 var(--radius-sheet) var(--radius-sheet);
+}
+
+.object {
+  position: absolute;
+  z-index: 0;
+  top: 60px;
+  right: -80px;
+  width: 260px;
+  height: 260px;
+  object-fit: contain;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.title {
+  position: relative;
+  z-index: 1;
+  max-width: 230px;
+  margin: var(--space-4) 0 var(--space-2);
+  font: 800 34px / 1.1 var(--font-display);
+  letter-spacing: var(--tracking-h1);
+  color: var(--color-text-inverse);
+  text-wrap: balance;
+}
+
+.subtitle {
+  position: relative;
+  z-index: 1;
+  max-width: 210px;
+  font: 400 15px / 1.4 var(--font-ui);
+  color: rgb(255 255 255 / 0.8);
+}
+
+.chips {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 6px;
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  font: 500 12px / 1 var(--font-ui);
+  color: var(--color-text-inverse);
+  text-align: center;
+  background: rgb(255 255 255 / 0.18);
+  border-radius: var(--radius-pill);
+}
+
+.calculator {
+  grid-area: calculator;
+  padding: var(--space-3) var(--space-5) 0;
+}
+
+.stats {
+  display: none;
+}
+
+@media (min-width: 1120px) {
+  .root {
+    grid-template-areas: 'header header' 'banner calculator';
+    grid-template-columns: minmax(0, 1fr) 440px;
+    gap: 0 var(--space-16);
+    align-items: center;
+    padding: 0 64px 64px;
+    background: linear-gradient(150deg, var(--brand-500), #4a21c4);
+  }
+
+  .header,
+  .banner {
+    padding-inline: 0;
+    background: none;
+    border-radius: 0;
+  }
+
+  .banner {
+    padding-block: var(--space-8);
+  }
+
+  .object {
+    display: none;
+  }
+
+  .title {
+    max-width: 640px;
+    margin: 0 0 var(--space-4);
+    font-size: 56px;
+    line-height: 1.05;
+  }
+
+  .subtitle {
+    max-width: 520px;
+    font-size: 19px;
+    line-height: 1.6;
+  }
+
+  .chips {
+    max-width: 560px;
+    margin-top: var(--space-8);
+    gap: var(--space-3);
+  }
+
+  .chip {
+    flex: 0 0 auto;
+    height: 40px;
+    padding-inline: var(--space-5);
+    font-size: 14px;
+  }
+
+  .calculator {
+    padding: 0;
+  }
+
+  .stats {
+    display: flex;
+    gap: var(--space-10);
+    margin: var(--space-10) 0 0;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .statValue {
+    font: 800 34px / 1 var(--font-display);
+    font-feature-settings: var(--font-feature-numeric);
+    color: var(--color-text-inverse);
+  }
+
+  .statLabel {
+    font: 400 15px / 1.4 var(--font-ui);
+    color: rgb(255 255 255 / 0.7);
+  }
+}

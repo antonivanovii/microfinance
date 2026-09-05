@@ -1,0 +1,12 @@
+/* Раздел 03 макета. */
+:root {
+  --shadow-none: none;
+  --shadow-flat: inset 0 0 0 1px var(--color-border);
+  --shadow-card: 0 2px 4px rgb(22 18 31 / 0.04), 0 10px 24px rgb(22 18 31 / 0.06);
+  --shadow-sheet: 0 8px 16px rgb(22 18 31 / 0.06), 0 24px 56px rgb(22 18 31 / 0.14);
+  --shadow-action: 0 8px 20px rgb(123 77 255 / 0.28);
+  --shadow-action-strong: 0 10px 24px rgb(123 77 255 / 0.34);
+  --shadow-row: 0 1px 2px rgb(22 18 31 / 0.06);
+  --shadow-focus: 0 0 0 4px rgb(123 77 255 / 0.14);
+  --shadow-focus-danger: 0 0 0 4px rgb(217 63 43 / 0.14);
+}

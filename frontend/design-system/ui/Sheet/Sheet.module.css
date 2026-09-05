@@ -1,0 +1,62 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-sheet);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: var(--color-overlay);
+  animation: fade var(--duration-fast) var(--ease-out);
+}
+
+.sheet {
+  width: 100%;
+  max-width: var(--container-content);
+  max-height: 90dvh;
+  overflow-y: auto;
+  padding: var(--space-2) var(--space-6) var(--space-6);
+  padding-bottom: max(var(--space-6), env(safe-area-inset-bottom));
+  background: var(--color-surface);
+  border-radius: var(--radius-sheet) var(--radius-sheet) var(--radius-card) var(--radius-card);
+  box-shadow: var(--shadow-sheet);
+  animation: rise var(--duration-normal) var(--ease-out);
+}
+
+.grabber {
+  width: 44px;
+  height: 5px;
+  margin: var(--space-2) auto var(--space-5);
+  background: var(--color-border-strong);
+  border-radius: var(--radius-pill);
+}
+
+.title {
+  margin-bottom: var(--space-2);
+  font: var(--text-h2);
+  color: var(--color-text);
+}
+
+.description {
+  margin-bottom: var(--space-5);
+  font: var(--text-footnote);
+  color: var(--color-text-secondary);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(16px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay,
+  .sheet {
+    animation: none;
+  }
+}

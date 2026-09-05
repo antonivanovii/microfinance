@@ -1,0 +1,20 @@
+.root {
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+}
+
+.padded {
+  padding: var(--space-5);
+}
+
+.roomy {
+  padding: var(--space-6);
+}
+
+.flush {
+  padding: 0;
+}
+
+.raised {
+  box-shadow: var(--shadow-card);
+}

@@ -1,0 +1,6 @@
+.root {
+  display: block;
+  aspect-ratio: 1;
+  object-fit: contain;
+  user-select: none;
+}

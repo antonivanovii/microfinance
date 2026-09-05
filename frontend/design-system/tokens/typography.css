@@ -1,0 +1,42 @@
+/* Раздел 02 макета. Onest — заголовки и суммы, Golos Text — интерфейс. */
+:root {
+  --font-display: 'Onest', 'Golos Text', system-ui, -apple-system, sans-serif;
+  --font-ui: 'Golos Text', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+
+  --font-feature-numeric: 'tnum' 1, 'lnum' 1;
+
+  --text-display: 800 48px / 1.05 var(--font-display);
+  --text-h1: 700 34px / 1.15 var(--font-display);
+  --text-h2: 700 24px / 1.2 var(--font-display);
+  --text-h3: 700 19px / 1.3 var(--font-display);
+  --text-title: 600 19px / 1.3 var(--font-ui);
+  --text-body: 400 17px / 1.5 var(--font-ui);
+  --text-body-strong: 500 17px / 1.5 var(--font-ui);
+  --text-footnote: 400 15px / 1.45 var(--font-ui);
+  --text-footnote-strong: 600 15px / 1.45 var(--font-ui);
+  --text-caption: 500 13px / 1.4 var(--font-ui);
+  --text-label: 500 14px / 1.4 var(--font-ui);
+  --text-overline: 600 13px / 1 var(--font-ui);
+
+  --tracking-display: -0.03em;
+  --tracking-h1: -0.02em;
+  --tracking-h2: -0.01em;
+  --tracking-overline: 0.16em;
+  --tracking-normal: 0;
+
+  --size-display: 48px;
+  --size-h1: 34px;
+  --size-h2: 24px;
+  --size-title: 19px;
+  --size-body: 17px;
+  --size-footnote: 15px;
+  --size-label: 14px;
+  --size-caption: 13px;
+  --size-micro: 12px;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-black: 800;
+}

@@ -1,0 +1,14 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* На десктопе поля лежат в белой карточке: без неё они сливаются с фоном. */
+@media (min-width: 1120px) {
+  .root {
+    padding: var(--space-8);
+    background: var(--color-surface);
+    border-radius: var(--radius-panel);
+  }
+}

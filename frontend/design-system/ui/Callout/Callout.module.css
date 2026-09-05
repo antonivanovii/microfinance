@@ -1,0 +1,76 @@
+.root {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px 20px;
+  border-radius: 20px;
+}
+
+.centered {
+  align-items: center;
+}
+
+.badge {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  font: 700 14px / 1 var(--font-ui);
+  color: var(--color-on-accent);
+  border-radius: var(--radius-pill);
+}
+
+.text {
+  flex: 1;
+  font: var(--text-footnote);
+}
+
+.action {
+  flex-shrink: 0;
+  font: var(--text-footnote-strong);
+  white-space: nowrap;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.info {
+  background: var(--color-info-subtle);
+}
+.info .badge {
+  background: var(--color-accent);
+}
+.info .text {
+  color: var(--color-on-info-subtle);
+}
+.info .action {
+  color: var(--color-accent);
+}
+
+.warning {
+  background: var(--color-warning-subtle);
+}
+.warning .badge {
+  background: var(--color-warning);
+}
+.warning .text {
+  color: var(--color-on-warning-subtle);
+}
+.warning .action {
+  color: var(--color-warning);
+}
+
+.danger {
+  background: var(--color-danger-subtle);
+}
+.danger .badge {
+  background: var(--color-danger);
+}
+.danger .text {
+  color: var(--color-on-danger-subtle);
+}
+.danger .action {
+  color: var(--color-danger);
+}
